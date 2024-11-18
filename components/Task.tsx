@@ -1,4 +1,11 @@
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet,
+  ScrollView,
+} from "react-native";
 import React, { useState } from "react";
 
 const Task = () => {
@@ -13,7 +20,6 @@ const Task = () => {
   // add task btn
   const handleAddTask = () => {
     setTaskList((prevTask) => [...prevTask, task]);
-    alert("task added succesfully");
     setTask("");
   };
   return (
@@ -33,11 +39,13 @@ const Task = () => {
       </View>
 
       <View>
-        {taskList.map((mytask, index) => (
-          <Text style={styles.taskList} key={index}>
-            {mytask}
-          </Text>
-        ))}
+        <ScrollView>
+          {taskList.map((mytask, index) => (
+            <Text style={styles.taskList} key={index}>
+              {mytask}
+            </Text>
+          ))}
+        </ScrollView>
       </View>
     </View>
   );

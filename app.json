@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "cbb7320a-98c4-4a67-8809-b92d7fa86adc"
+      }
+    },
+    "owner": "harlem"
   }
 }
